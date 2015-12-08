@@ -1,1 +1,1 @@
-http://do7be.github.io/practice-html
+http://do7be.github.io/practice-html/standard-layout/
