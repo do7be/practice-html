@@ -11,7 +11,7 @@ body {
   padding: 30px;
   background-color: #f6f7fb;
   color: #333;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 *, *::before, *::after {
@@ -69,4 +69,20 @@ a:link, a:visited, a:hover, a:active {
 .item > a:hover {
   box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
   opacity: 0.8
+}
+.item-maindish,
+.item-maindish .category::before {
+  border-color: #ffc0cb;
+}
+.item-appetizer,
+.item-appetizer .category::before {
+  border-color: #76c047;
+}
+.item-column,
+.item-column .category::before {
+  border-color: #fff100;
+}
+.item-breaktime,
+.item-breaktime .category::before {
+  border-color: #c1efff;
 }
