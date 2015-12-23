@@ -111,10 +111,32 @@ a:link, a:visited, a:hover, a:active {
   color: #777;
   transition: all 0.3s;
 }
+.item > a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  left: 8px;
+  height: 109px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.item-m > a::before {
+  height: 146px;
+}
+.item-l > a::before {
+  height: 403px;
+}
 .item > a:hover {
   box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
   opacity: 0.8
 }
+.item > a:hover::before {
+  opacity: 1.0;
+}
+
 .item-maindish,
 .item-maindish .category::before {
   border-color: #ffc0cb;
