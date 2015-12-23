@@ -80,9 +80,10 @@ a:link, a:visited, a:hover, a:active {
   overflow: hidden;
 }
 .item .image {
-  display: block;
+  position: relative;
+}
+.item .image img {
   width: 100%;
-  height: 109px;
 }
 .item .category {
   margin: 15px 9px 10px;
@@ -112,30 +113,25 @@ a:link, a:visited, a:hover, a:active {
   color: #777;
   transition: all 0.3s;
 }
-.item > a::before {
+.item > a .image::before {
   content: '';
   display: block;
   position: absolute;
-  top: 8px;
-  right: 8px;
-  left: 8px;
-  height: 109px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s linear;
 }
-.item-m > a::before {
-  height: 146px;
-}
-.item-l > a::before {
-  height: 403px;
-}
-.item > a::after {
+.item > a .image::after {
   content: 'MORE';
   display: block;
   position: absolute;
-  top: 43.5px;
+  top: 50%;
   left: 150%;
+  margin-top: -19px;
   margin-left: -50px;
   width: 100px;
   padding: 8px;
@@ -148,20 +144,14 @@ a:link, a:visited, a:hover, a:active {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-.item-m > a::after {
-  top: 62px;
-}
-.item-l > a::after {
-  top: 190.5px;
-}
 .item > a:hover {
   box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
   opacity: 0.8
 }
-.item > a:hover::before {
+.item > a:hover .image::before {
   opacity: 1.0;
 }
-.item > a:hover::after {
+.item > a:hover .image::after {
   left: 50%;
   opacity: 1.0;
 }
@@ -184,12 +174,12 @@ a:link, a:visited, a:hover, a:active {
 .item-m {
   width: 364px;
 }
-.item-m .image {
+.item-m .image img {
   height: 146px;
 }
 .item-l {
   width: 732px;
 }
-.item-l .image {
+.item-l .image img {
   height: 403px;
 }
