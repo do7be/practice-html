@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 
 /*
  * base
@@ -296,6 +296,7 @@ a:link, a:visited, a:hover, a:active {
   counter-reset: ranking;
 }
 .ranking .ranking-item {
+  position: relative;
   margin-top: 15px;
 }
 .ranking .ranking-item a {
@@ -312,26 +313,29 @@ a:link, a:visited, a:hover, a:active {
 }
 .ranking .text {
   display: inline-block;
-  width: 182px;
+  width: 200px;
   color: #000;
   font-size: 1.4rem;
   vertical-align: top;
   line-height: 1.5;
+  margin-left: 15px;
 }
 .ranking .order {
   display: inline-block;
+  position: absolute;
+  top: -8px;
+  left: 35px;
   width: 18px;
   height: 18px;
   margin: 0 10px;
   border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
   color: #aaa;
   vertical-align: 20px;
   text-align: center;
   font-weight: bold;
   line-height: 16px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 .ranking .ranking-item:nth-of-type(1) .order,
 .ranking .ranking-item:nth-of-type(2) .order,
@@ -350,14 +354,10 @@ a:link, a:visited, a:hover, a:active {
 .ranking .ranking-item:nth-of-type(3) .order {
   background-color: #a0541a;
 }
-.ranking .order:before {
+.ranking .order::before {
   content: counter(ranking);
   counter-increment: ranking;
-  display: inline-block;
   font-size: 1.0rem;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }
 
 /*
